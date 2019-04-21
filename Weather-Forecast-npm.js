@@ -1,25 +1,22 @@
-var inquirer = require("inquirer");
-var weather = require('weather-js')
+const inquirer = require("inquirer");
+const weather = require('weather-js')
 
 
-var questions = [
+const questions = [
     {
         type: 'input',
         name: 'location',
         message: "What's your location? 'City State'",
 
     },
-
 ];
-
 inquirer.prompt(questions).then(answers => {
 
     forecast(answers.location)
 });
 
 function forecast(location) {
-
-    var choices = [
+    let choices = [
         {
             type: 'list',
             name: 'forecast',
@@ -27,13 +24,10 @@ function forecast(location) {
             choices: [
                 'Curent Weather',
                 'Wether for week']
-
         },]
 
     inquirer.prompt(choices).then(answers => {
-
         console.log(answers.forecast)
-
         weather.find({ search: location, degreeType: 'F' }, function (err, result) {
             if (err) console.log(err);
            
@@ -42,10 +36,7 @@ function forecast(location) {
             }
             if (answers.forecast == "Wether for week") {
                 console.log(result[0].forecast)
-            }
-        
+            } 
         });
-
     });
-
 }
