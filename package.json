@@ -1,0 +1,24 @@
+{
+  "name": "Weather-npm",
+  "version": "1.0.0",
+  "description": "- First install required node packages by running `npm init y` command in node to the root folder\r  - Then run `node Weather-Forecast-npm.js` and answer basic questions: The location and the weather you would like to know.",
+  "main": "Weather-Forecast-npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stanmozolevskiy/Weather-npm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stanmozolevskiy/Weather-npm/issues"
+  },
+  "homepage": "https://github.com/Stanmozolevskiy/Weather-npm#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "weather-js": "^2.0.0"
+  }
+}

@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
-const weather = require('weather-js')
+const weather = require('weather-js');
 
+console.log("something wrong")
 
 const questions = [
     {
